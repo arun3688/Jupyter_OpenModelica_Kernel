@@ -4,6 +4,8 @@ import re
 import numpy
 from numpy import array
 import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
 import os
 import re
 import shutil
@@ -120,7 +122,7 @@ class OpenModelicaKernel(Kernel):
                       pass
 
                 except:
-                   val="failed"
+                   val=self.omc.sendExpression(code,parsed=False)
                
                 #print self.matfile
                 if not silent: 
