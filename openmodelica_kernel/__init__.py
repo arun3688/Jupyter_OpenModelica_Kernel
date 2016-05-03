@@ -1,3 +1,4 @@
+# coding=utf-8
 __license__ = """
  This file is part of OpenModelica.
 

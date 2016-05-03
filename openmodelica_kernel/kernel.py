@@ -1,3 +1,4 @@
+# coding=utf-8
 __license__ = """
  This file is part of OpenModelica.
 
@@ -169,6 +170,11 @@ class OpenModelicaKernel(Kernel):
                 'payload': [],
                 'user_expressions': {},
                }
+    def do_shutdown(self, restart):
+            try:
+                self.omc.__del__()
+            except:
+                pass            
 '''
 if __name__ == '__main__':
     try:
